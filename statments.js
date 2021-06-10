@@ -8,26 +8,44 @@
 let a = [1, 9, 8, 34];
 for (let i = 0; i < a.length; a[i++] = 0); //the semicolon is an empty statement
 
-let text;
-let n = 2
-let hello = (n) => {
-  switch (n) {
-    case 1:
-      text = "Hi";
-      break;
+
+// switch with return in the middel of the code - returns the value and doesn't execute the next statments (statments after the switch)
+//swiths with return inside of a function - the function returns the valu and the next statments will be carried out
+const sayPrull = () => {
+let prullish = 2
+switch(prullish) {
+  case 1:
+    console.log("Hello");
+    return;
     case 2:
-    console.log(  text = "Tere");
-      break;
+    console.log("Hi");
+    return;
     case 3:
-      text = "Ztrasvuite";
-      break;
+    console.log("Tere");
+    return;
     default:
-      text = "just say Hello!";
-      break;
-  }
- // console.log(n)
+      console.log("No hello to you");
+      return;
 }
-console.log(hello(n))
+}
+sayPrull();
+// switch with break in the middel of the code - breaks out of the switch and carries on the next statment that comes after the switch
+let prull = 3
+switch(prull) {
+  case 1:
+    console.log("Hello");
+    break;
+    case 2:
+    console.log("Hi");
+    break;
+    case 3:
+    console.log("Tere");
+    break;
+    default:
+      console.log("No hello to you");
+      break;
+}
+
 
 
 //thhe interpreter executes statment repeatedly while the expression is truthy
@@ -35,5 +53,9 @@ console.log(hello(n))
 let count = 0;
 while (count < 5) {
   console.log(count);
+  count++;
+}
+while (count < 8) {
+  console.log(`The number is ${count}`);
   count++;
 }
