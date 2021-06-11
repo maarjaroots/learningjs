@@ -59,3 +59,24 @@ while (count < 8) {
   console.log(`The number is ${count}`);
   count++;
 }
+
+// do while loop - the body of the loop is always executed at least once.
+let b = [];
+const printArray = () => {
+  let len = b.length, i = 0;
+  if (len ===0) {
+    console.log("Empty array");
+  } else {
+    do {
+      console.log(b[i]);
+      }
+      while(i++);
+  }
+}
+printArray();
+
+// for(initialize; test; increment;)
+// { statement}
+for(let co = 0; co < 10; co++) {
+  console.log(co);
+}
