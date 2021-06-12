@@ -80,3 +80,17 @@ printArray();
 for(let co = 0; co < 10; co++) {
   console.log(co);
 }
+
+// using comma to combine multiple initializations and increment expressions into a single expression suitable for use in a for loop
+let i, j, sum = 1;
+for(i = 0, j = 0; i< 10 ; i++, j--) {
+  console.log(sum += i*j);
+}
+
+
+//for/of loop works with iterable objects (arrays, strings, sets and maps - sequence or set of elements that can loop or iteraye through)
+let data = [1,2,3,4,5,6,7,8,9], summ =0;
+for(let element of data) {
+  summ += element;
+}
+console.log(summ);
