@@ -94,3 +94,17 @@ for(let element of data) {
   summ += element;
 }
 console.log(summ);
+
+let dataName = [[1,2,3], "maaarja", [0,8,6]]
+for (let value of dataName) {
+  console.log(value);
+}
+
+
+//for/of with objects -  I need to use Object.keys, Object.entries or Object.values - these methods return an array - the loop can iterate through
+let o = { x:1, y:2, z:3};
+let keys = "";
+for(let k of Object.keys(o)) {
+  keys += k;
+  console.log(keys);
+}
