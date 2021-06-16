@@ -102,9 +102,26 @@ for (let value of dataName) {
 
 
 //for/of with objects -  I need to use Object.keys, Object.entries or Object.values - these methods return an array - the loop can iterate through
+//Object.keys returns an array of property names for an object
 let o = { x:1, y:2, z:3};
 let keys = "";
 for(let k of Object.keys(o)) {
   keys += k;
   console.log(keys);
 }
+//Oject.values returns an array of property values for an object
+let sumOf = 0;
+for(let v of Object.values(o)) {
+  sumOf += v;
+  console.log(sumOf);
+}
+//Object.entries returns an array of arrays, where each innner array represents a key/value pair for one property of the object.
+//using the destructing assigment to unpack values into distinct variables
+let pairs = "";
+for(let [k, v] of Object.entries(o)) {
+  pairs += k + v;
+  console.log(pairs);
+}
+//destructing assignment - the value of the righthand side of the equals sign is an array or object (a structured value)
+//and the lefthand side specifies on or more variables names using syntax that mimics array and object literal syntax.
+let [x,y] = [1,2] // same as let x =1, y=2;

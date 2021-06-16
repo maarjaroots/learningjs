@@ -2,6 +2,7 @@ let myName = "Maarja";
 let greeting = `Hello ${myName}!`;
 console.log(greeting);
 
+//destruckting assigment
 let [x,y] = [1,2];
 console.log(x,y);
 
