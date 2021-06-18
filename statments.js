@@ -1,8 +1,8 @@
 //statment block that acts as a single statment when in {}
 {
-  x = Math.PI;
-  cx = Math.cos(x);
-  console.log("cos(n) = " + cx);
+ // x = Math.PI;
+ // cx = Math.cos(x);
+ // console.log("cos(n) = " + cx);
 }
 
 let a = [1, 9, 8, 34];
@@ -123,5 +123,27 @@ for(let [k, v] of Object.entries(o)) {
   console.log(pairs);
 }
 //destructing assignment - the value of the righthand side of the equals sign is an array or object (a structured value)
-//and the lefthand side specifies on or more variables names using syntax that mimics array and object literal syntax.
+//and the lefthand side specifies one or more variables names using syntax that mimics array and object literal syntax.
 let [x,y] = [1,2] // same as let x =1, y=2;
+
+//Strings are iterable character-by-character
+//creating an object, if frecuency has the letter - increase its count.
+let frequency = {};
+for(let letter of "missisippi") {
+  if (frequency[letter]) {
+    frequency[letter]++;
+  } else {
+    frequencygi[letter] = 1;
+  }
+}
+console.log(frequency)
+let summm = 0
+for(let s of Object.values(frequency)) {
+  summm += s;
+}
+console.log(summm);
+let em = "";
+for(let e of Object.keys(frequency)) {
+  em += e;
+}
+console.log(em);
