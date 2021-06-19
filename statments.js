@@ -133,7 +133,7 @@ for(let letter of "missisippi") {
   if (frequency[letter]) {
     frequency[letter]++;
   } else {
-    frequencygi[letter] = 1;
+    frequency[letter] = 1;
   }
 }
 console.log(frequency)
@@ -147,3 +147,25 @@ for(let e of Object.keys(frequency)) {
   em += e;
 }
 console.log(em);
+
+//for/of Set - Set class is iterable, print unique words in a string
+let text = "Na Na Na Na Pow Wow Pow Wow Batman!";
+let wordSet = new Set(text.split(" "));
+let uniques = [];
+for(let word of wordSet) {
+  uniques.push(word);
+}
+console.log(uniques)
+// let letterPairs = "";
+// for(letter of uniques) {
+// letterPairs += letter;
+// }
+// console.log(letterPairs);
+
+
+//for/of Map- Map object iterates through the key/value pairs, destructing
+let m = new Map([[1, "one" ], [2, "two"]]);
+for(let [key, value] of m) {
+  console.log(key, value)
+}
+//console.log(m);
