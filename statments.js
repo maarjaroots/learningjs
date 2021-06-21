@@ -169,3 +169,10 @@ for(let [key, value] of m) {
   console.log(key, value)
 }
 //console.log(m);
+
+
+//for/in works with any object   //practical to use for debugging - easy way to check the properties of an object
+let numObj = {a:1, b:2, c:3};
+for(let property in numObj) {
+  console.log(`${property}:${numObj[property]}`);
+}
