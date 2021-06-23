@@ -176,3 +176,21 @@ let numObj = {a:1, b:2, c:3};
 for(let property in numObj) {
   console.log(`${property}:${numObj[property]}`);
 }
+let ma = [[1, "one" ], [2, "two"]];
+for(let [key, value] of ma) {
+  console.log(key, value)
+}
+
+let sdf = [1, "hi", 8, "hj"];
+numberA = [];
+stringA = [];
+for(let i=0; i < sdf.length; i++) {
+  console.log(sdf[i]);
+  if(typeof sdf[i] === 'string') {
+    stringA.push(sdf[i]);
+  }
+  else if(typeof sdf[i] === 'number') {
+    numberA.push(sdf[i]);
+  }
+}
+console.log(numberA, stringA);
