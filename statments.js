@@ -194,3 +194,18 @@ for(let i=0; i < sdf.length; i++) {
   }
 }
 console.log(numberA, stringA);
+
+let objObj = {a: 1, b: 10, c: 18}, total = 0, totalEmp ="", pairEmp ="";
+for(let all of Object.values(objObj)) {
+  console.log(all);
+  total += all;
+}
+console.log(total);
+for(let all of Object.keys(objObj)) {
+totalEmp += all + "hi";
+}
+console.log(totalEmp);
+for(let [a,b] of Object.entries(objObj)) {
+  pairEmp += a + b;
+}
+console.log(pairEmp);
