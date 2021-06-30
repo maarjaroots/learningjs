@@ -209,3 +209,14 @@ for(let [a,b] of Object.entries(objObj)) {
   pairEmp += a + b;
 }
 console.log(pairEmp);
+
+//continue - jätab vahele ja siis jätkab edasi. Can be used only within the body of the loop
+//in the for loop the increment expression is evaluated, and the test expression is tested again to determine if another iteration should be done
+//this is where the while and for loop differ
+//a while loop returns directly to its condition
+//but a for loop firts evaluates its increment expression an then returns directly to its condition
+let arrayOf = [1,2,3,4,5];
+for(let i=0; i < 5; i++) {
+  if (i === 2) continue;
+  console.log(i);
+}
