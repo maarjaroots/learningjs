@@ -220,3 +220,33 @@ for(let i=0; i < 5; i++) {
   if (i === 2) continue;
   console.log(i);
 }
+
+const factorial = (x) => {
+  if (x <0) throw new Error("x must not be negative");
+  let f;
+  for(f = 1; x > 1; f*=x, x--);
+  return f;
+}
+console.log(factorial(4));
+
+const findFactorial = (x) => {
+  try {
+    let n = parseInt(document.getElementById("numberInput").value)
+    let f = factorial(n);
+    let answer = `The factorial of ${n} is: ${f}`
+    return document.getElementById("factorialOut").innerHTML = answer;
+    //return f;
+  }
+  catch(ex) {
+    document.getElementById("factorialOut").innerHTML = (ex);
+  }
+}
+
+// try {
+//   let n = Number(prompt("please enter a positive integer", ""));
+//   let f = factorial(n);
+//   alert(n + "! = " + f);
+// }
+// catch(ex) {
+//   alert(ex);
+// }
