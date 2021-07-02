@@ -232,7 +232,8 @@ console.log(factorial(4));
 const findFactorial = (x) => {
   try {
     let n = parseInt(document.getElementById("numberInput").value)
-    let f = factorial(n);
+    let f = factorial(n) ;
+    //debugger;                        // <-- DEBUGGER!
     let answer = `The factorial of ${n} is: ${f}`
     return document.getElementById("factorialOut").innerHTML = answer;
     //return f;
@@ -250,3 +251,13 @@ const findFactorial = (x) => {
 // catch(ex) {
 //   alert(ex);
 // }
+
+//DEBUGGER TESTED IN THE FINDFACTORIAL FUNCTION 
+// DEBUGGER will cause a breakpoint in the web browser and I can step it throug in the developers console
+// const hgf = (o) => {
+//   if (o === undefined) debugger;
+//   else if (o === 1) {
+//     console.log("Cheese");
+//   }
+// }
+// hgf();
